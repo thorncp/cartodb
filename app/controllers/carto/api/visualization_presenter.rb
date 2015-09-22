@@ -1,6 +1,7 @@
 require_relative 'external_source_presenter'
 require_relative 'permission_presenter'
 require_relative 'user_table_presenter'
+require_dependency 'static_maps_url_helper'
 
 module Carto
   module Api
@@ -48,7 +49,14 @@ module Carto
           external_source: Carto::Api::ExternalSourcePresenter.new(@visualization.external_source).to_poro,
           synchronization: Carto::Api::SynchronizationPresenter.new(@visualization.synchronization).to_poro,
           children: @visualization.children.map { |v| children_poro(v) },
-          liked: @current_viewer ? @visualization.is_liked_by_user_id?(@current_viewer.id) : false
+          liked: @current_viewer ? @visualization.is_liked_by_user_id?(@current_viewer.id) : false,
+          image_preview_url: Carto::StaticMapsURLHelper.new.url_for_static_map_without_request(
+            @visualization.user.username, 
+            'https', #TODO Use the tiler config protocol
+            @visualization, 
+            600, 
+            300
+          )
         }
         poro.merge!( { related_tables: related_tables } ) if @options.fetch(:related, true)
         poro
