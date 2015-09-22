@@ -230,7 +230,7 @@ $sLabel-width: 140px;
   position: relative;
   height: 38px;
   padding: 0 12px;
-  border: 1px solid #cccccc;
+  border: 1px solid #CCCCCC;
   border-radius: 4px;
   outline: none;
   color: #666666;
@@ -242,27 +242,27 @@ $sLabel-width: 140px;
   }
 }
 .FormAccount-input.FormAccount-input--error {
-  border-color: rgba(#dd3B37, 0.6);
+  border-color: rgba(#DD3B37, 0.6);
 }
 .FormAccount-input.FormAccount-input--error:focus,
 .FormAccount-input.FormAccount-input--error:hover {
-  border-color: rgba(#dd3B37, 1);
+  border-color: rgba(#DD3B37, 1);
 }
 
 .FormAccount-input::-webkit-input-placeholder {
-  color: #aaaaaa;
+  color: #AAAAAA;
   font-style: italic;
 }
 .FormAccount-input:-moz-placeholder {
-  color: #aaaaaa;
+  color: #AAAAAA;
   font-style: italic;
 }
 .FormAccount-input::-moz-placeholder {
-  color: #aaaaaa;
+  color: #AAAAAA;
   font-style: italic;
 }
 .FormAccount-input:-ms-input-placeholder {
-  color: #aaaaaa;
+  color: #AAAAAA;
   font-style: italic;
 }
 // Sizes
@@ -338,7 +338,7 @@ $sLabel-width: 140px;
   left: 0;
   height: 38px;
   padding: 0 12px;
-  border: 1px solid #cccccc;
+  border: 1px solid #CCCCCC;
   border-radius: 4px;
   background: #FFF4F4;
   color: $cHighlight-negative;
@@ -392,14 +392,14 @@ $sLabel-width: 140px;
   height: 100px;
   border: 1px solid $cTypography-help;
   border-radius: 4px;
-  background: #ffffff;
+  background: #FFFFFF;
   overflow: hidden;
 }
 .FormAccount-avatarPreviewImage {
   position: relative;
   max-width: 100px;
   border-radius: 4px;
-  background: #ffffff;
+  background: #FFFFFF;
 }
 .FormAccount-avatarPreviewLoader {
   position: absolute;
