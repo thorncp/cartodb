@@ -319,11 +319,12 @@ $sLabel-width: 140px;
   z-index: 2;
 }
 .FormAccount-inputIcon {
+  color: $cTypography-help;
+  font-size: $sFontSize-larger;
+
   position: absolute;
   top: 12px;
   right: 14px;
-  color: $cTypography-help;
-  font-size: $sFontSize-larger;
   z-index: 3;
 }
 .FormAccount-inputIcon--clock {
@@ -417,6 +418,13 @@ $sLabel-width: 140px;
   margin: -20px 0 0 -20px;
   z-index: 1;
 }
+.FormAccount-avatarPreview {
+  @include display-flex();
+  @include flex-direction(row);
+}
+.FormAccount-fileAvatar {
+  margin-left: 20px;
+}
 .FormAccount-avatar .input-group {
   position: absolute;
   top: 10px;
@@ -436,6 +444,7 @@ $sLabel-width: 140px;
   top: 0;
   left: 0;
   width: 85px;
+  margin-left: 2px;
   color: $cTypography-link;
   &:hover {
     color: $cTypography-linkHover;
